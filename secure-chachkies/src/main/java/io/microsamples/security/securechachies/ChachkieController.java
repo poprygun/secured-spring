@@ -40,6 +40,6 @@ public class ChachkieController {
 
 
     private Chachkie read(String name) {
-        return this.chachkies.computeIfAbsent(name, (k) -> new Chachkie(k));
+        return this.chachkies.computeIfAbsent(name, (k) -> new Chachkie(name));
     }
 }

@@ -47,7 +47,6 @@ public class AuthorizationModelProcessor implements
                     model.add(linkTo(method, authentication).withRel(method.getName()));
                 }
             } catch (Throwable ex) {
-                // no problem, don't add link
             }
         }
         return model;
