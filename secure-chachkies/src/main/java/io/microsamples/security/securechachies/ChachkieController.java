@@ -1,6 +1,5 @@
 package io.microsamples.security.securechachies;
 
-import io.microsamples.security.securechachies.conf.Chachkie;
 import org.springframework.hateoas.EntityModel;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
@@ -19,21 +18,21 @@ public class ChachkieController {
 
 
     @PostMapping("/up")
-    @PreAuthorize("hasAuthority('SCOPE_sentiment.write')")
+    @PreAuthorize("hasAuthority('SCOPE_chachkie.write')")
     public EntityModel<Chachkie> up(Authentication authentication) {
         Chachkie chachkie = read(authentication.getName());
         return EntityModel.of(chachkie.up());
     }
 
     @PostMapping("/down")
-    @PreAuthorize("hasAuthority('SCOPE_sentiment.write')")
+    @PreAuthorize("hasAuthority('SCOPE_chachkie.write')")
     public EntityModel<Chachkie> down(Authentication authentication) {
         Chachkie chachkie = read(authentication.getName());
         return EntityModel.of(chachkie.down());
     }
 
     @GetMapping
-    @PreAuthorize("hasAuthority('SCOPE_sentiment.read')")
+    @PreAuthorize("hasAuthority('SCOPE_chachkie.read')")
     public EntityModel<Chachkie> read(Authentication authentication) {
         return EntityModel.of(read(authentication.getName()));
     }

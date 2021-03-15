@@ -17,4 +17,4 @@ spring:
             client-secret: secret
             authorization-grant-type: authorization_code
             redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
-            scope: sentiment.read,sentiment.write
+            scope: chachkie.read,chachkie.write

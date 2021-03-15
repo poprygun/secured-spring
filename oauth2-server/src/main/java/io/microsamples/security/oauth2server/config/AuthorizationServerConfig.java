@@ -39,8 +39,8 @@ public class AuthorizationServerConfig {
                 .clientAuthenticationMethod(ClientAuthenticationMethod.BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .redirectUri("http://localhost:8080/login/oauth2/code/spring")
-                .scope("sentiment.read")
-                .scope("sentiment.write")
+                .scope("chachkie.read")
+                .scope("chachkie.write")
                 .clientSettings((settings) -> settings.requireUserConsent(true))
                 .build();
         return new InMemoryRegisteredClientRepository(registeredClient);

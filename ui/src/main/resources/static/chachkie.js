@@ -11,17 +11,17 @@ $( document ).ajaxSuccess((event, xhr, objects, data) => {
     const links = data["_links"];
     if (links) {
         if (links["up"]) {
-            sentiment.up = () => sentiment._up(sentiment.root + "/up");
-            $("#up-arrow").addClass("enabled")[0].onclick = sentiment.up;
+            chachkie.up = () => chachkie._up(chachkie.root + "/up");
+            $("#up-arrow").addClass("enabled")[0].onclick = chachkie.up;
         } else {
-            delete sentiment.up;
+            delete chachkie.up;
             delete $("#up-arrow").removeClass("enabled")[0].onclick;
         }
         if (links["down"]) {
-            sentiment.down = () => sentiment._down(sentiment.root + "/down");
-            $("#down-arrow").addClass("enabled")[0].onclick = sentiment.down;
+            chachkie.down = () => chachkie._down(chachkie.root + "/down");
+            $("#down-arrow").addClass("enabled")[0].onclick = chachkie.down;
         } else {
-            delete sentiment.down;
+            delete chachkie.down;
             delete $("#down-arrow").removeClass("enabled")[0].onclick;
         }
     }
@@ -35,11 +35,11 @@ $( document ).ajaxComplete((event, xhr) => {
     }
 });
 
-const sentiment = {
+const chachkie = {
     root: "http://localhost:8080/chachkie",
-    read: () => $.get(sentiment.root, (data) => $("#sentiment").html(data.sentiment)),
-    _up: (url) => $.post(url, (data) => $("#sentiment").html(data.sentiment)),
-    _down: (url) => $.post(url, (data) => $("#sentiment").html(data.sentiment))
+    read: () => $.get(chachkie.root, (data) => $("#chachkie").html(data.chachkie)),
+    _up: (url) => $.post(url, (data) => $("#chachkie").html(data.chachkie)),
+    _down: (url) => $.post(url, (data) => $("#chachkie").html(data.chachkie))
 };
 
 const security = {
@@ -55,5 +55,5 @@ const security = {
 };
 
 $(() => {
-    sentiment.read();
+    chachkie.read();
 });

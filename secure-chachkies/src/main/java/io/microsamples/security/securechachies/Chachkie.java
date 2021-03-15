@@ -1,13 +1,13 @@
-package io.microsamples.security.securechachies.conf;
+package io.microsamples.security.securechachies;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class Chachkie {
-    private AtomicInteger sentiment = new AtomicInteger(0);
+    private AtomicInteger chachkie = new AtomicInteger(0);
     private String name;
 
-    public Integer getSentiment() {
-        return sentiment.get();
+    public Integer getChachkie() {
+        return chachkie.get();
     }
 
     public String getName() {
@@ -20,12 +20,12 @@ public class Chachkie {
 
 
     public Chachkie up() {
-        sentiment.incrementAndGet();
+        chachkie.incrementAndGet();
         return this;
     }
 
     public Chachkie down() {
-        sentiment.decrementAndGet();
+        chachkie.decrementAndGet();
         return this;
     }
 }

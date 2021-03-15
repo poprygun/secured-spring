@@ -3,6 +3,7 @@ package io.microsamples.security.securechachies.conf;
 import java.lang.reflect.Method;
 import java.util.Collection;
 
+import io.microsamples.security.securechachies.Chachkie;
 import io.microsamples.security.securechachies.ChachkieController;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.aopalliance.intercept.MethodInvocation;
