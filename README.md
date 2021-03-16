@@ -54,7 +54,7 @@ You should be able to login to [UI Application](http://localhost:8080) with `tif
 
 ## Resources:
 
-[Josh Cummings Spring Security Cata](https://www.youtube.com/watch?v=P4TI1gLmr-4&ab_channel=VMwareTanzu)
+[Josh Cummings Spring Security Kata](https://www.youtube.com/watch?v=P4TI1gLmr-4&ab_channel=VMwareTanzu)
 
 [Josh's Repo](https://github.com/jzheaux/spring-security-tanzu-tuesday-november)
 
