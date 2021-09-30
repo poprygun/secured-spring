@@ -36,7 +36,7 @@ $( document ).ajaxComplete((event, xhr) => {
 });
 
 const chachkie = {
-    root: "http://localhost:8080/chachkie",
+    root: "http://localhost:8380/chachkie",
     read: () => $.get(chachkie.root, (data) => $("#chachkie").html(data.chachkie)),
     _up: (url) => $.post(url, (data) => $("#chachkie").html(data.chachkie)),
     _down: (url) => $.post(url, (data) => $("#chachkie").html(data.chachkie))
