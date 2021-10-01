@@ -8,6 +8,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
@@ -35,6 +37,12 @@ public class ChachkieController {
     @PreAuthorize("hasAuthority('SCOPE_chachkie.read')")
     public EntityModel<Chachkie> read(Authentication authentication) {
         return EntityModel.of(read(authentication.getName()));
+    }
+
+    @GetMapping(path = "/logout")
+    public String logout(HttpServletRequest request) throws ServletException {
+        request.logout();
+        return "/";
     }
 
 
